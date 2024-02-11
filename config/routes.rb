@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "/about", to: "about#index"
+
+  get "sign_up", to: "registration#new"
+  post "sign_up", to: "registration#create"
+
   root to: "about#home"
 
 end
