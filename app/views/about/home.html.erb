@@ -1,1 +1,6 @@
 <h1> Welcome to my new Rails App! </h1>
+
+<% if @user %>
+ Logged in as <%= user.email %>
+<% end %>
+
