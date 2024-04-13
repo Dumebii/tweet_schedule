@@ -1,14 +1,14 @@
 <h1> Welcome to my new Rails App! </h1>
 
-<p><%= @user %></p>
+<% if @user%>
+<p>Welcome, <%= @user %></p>
+<%end%>
+
 
 <% if @user %>
-<%
-=begin%>
- <%= @user.inspect %> 
-<%
-=end%>
  Logged in as <%= @user.email %>
+
+ <%= button_to "Log out", logout_path, method: :delete %>
 <% end %>
 
 <p>omoh</p>
